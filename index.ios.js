@@ -3,17 +3,20 @@ import {
   Text,
   AppRegistry,
   View,
-  Button
+  Button,
+  StyleSheet
 } from 'react-native'
 
 const gerarNumeroAleatorio = () => {
-  var numeroAleatorio = Math.floor(Math.random()*10)
+  var numeroAleatorio = Math.random()
+  numeroAleatorio = Math.floor(numeroAleatorio*10)
+  alert(numeroAleatorio)
 }
 
 const App = () => {
   return (
     <View>
-      {alert('Seja Bemvindo')}
+      {alert('olá')}
       <Text>Gerador de Número Aleatório</Text>
       <Button
         title="Gerar"
