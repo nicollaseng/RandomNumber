@@ -13,7 +13,12 @@ const estilo = {
     backgroundColor: '#0099e6',
     color: 'white',
     padding: 20,
-    textAlign: 'center'
+    textAlign: 'center',
+    shadowColor: '#d9d9d9',
+    shadowOffset: {width:0, height:10},
+    shadowOpacity: 1,
+    shadowRadius: 1,
+    marginVertical: 25
   },
   buton: {
     height:100,
@@ -23,7 +28,7 @@ const estilo = {
 const gerarNumeroAleatorio = () => {
   var numeroAleatorio = Math.random()
   numeroAleatorio = Math.floor(numeroAleatorio*10)
-  alert(numeroAleatorio)
+  alert(`O numero sorteado foi: ${numeroAleatorio}`)
 }
 
 const App = () => {
