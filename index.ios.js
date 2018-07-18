@@ -1,14 +1,25 @@
 import React from 'react'
 import {
   Text,
-  AppRegistry
+  AppRegistry,
+  View,
+  Button
 } from 'react-native'
+
+const gerarNumeroAleatorio = () => {
+  var numeroAleatorio = Math.floor(Math.random()*10)
+}
 
 const App = () => {
   return (
-  <Text>
-    Olá Mundo!
-  </Text>
+    <View>
+      {alert('Seja Bemvindo')}
+      <Text>Gerador de Número Aleatório</Text>
+      <Button
+        title="Gerar"
+        onPress={gerarNumeroAleatorio}
+       />
+    </View>
   )
 }
 
