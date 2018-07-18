@@ -7,20 +7,34 @@ import {
   StyleSheet
 } from 'react-native'
 
+const estilo = {
+  text: {
+    fontSize: 50,
+    backgroundColor: '#b3ffb3',
+    height: 70,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buton: {
+    height:100,
+  }
+}
+
 const gerarNumeroAleatorio = () => {
   var numeroAleatorio = Math.random()
   numeroAleatorio = Math.floor(numeroAleatorio*10)
-  alert(numeroAleatorio)
+  alert(numeroAleatorio)§
 }
 
 const App = () => {
   return (
     <View>
-      {alert('olá')}
-      <Text>Gerador de Número Aleatório</Text>
+      {alert('Olá seja bem-vindo ao Par ou Impar v1. Desenvolvedor: Nicollas Linhares')}
+      <Text style={estilo.text}>Par ou Impar</Text>
       <Button
         title="Gerar"
         onPress={gerarNumeroAleatorio}
+        sytle={estilo.buton}
        />
     </View>
   )
