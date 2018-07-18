@@ -9,11 +9,11 @@ import {
 
 const estilo = {
   text: {
-    fontSize: 50,
-    backgroundColor: '#b3ffb3',
-    height: 70,
-    alignItems: 'center',
-    justifyContent: 'center',
+    fontSize:50,
+    backgroundColor: '#0099e6',
+    color: 'white',
+    padding: 20,
+    textAlign: 'center'
   },
   buton: {
     height:100,
@@ -23,7 +23,7 @@ const estilo = {
 const gerarNumeroAleatorio = () => {
   var numeroAleatorio = Math.random()
   numeroAleatorio = Math.floor(numeroAleatorio*10)
-  alert(numeroAleatorio)§
+  alert(numeroAleatorio)
 }
 
 const App = () => {
