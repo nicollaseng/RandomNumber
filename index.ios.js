@@ -33,16 +33,23 @@ const estilo = {
      borderColor: "#53ff1a",
      borderWidth: 0.5,
      borderRadius: 8
-     
-
    },
    textoBotao: {
      fontSize: 30,
      color: "#53ff1a",
      fontWeight: 'bold',
      textAlign: 'center'
-   }
-}
+   },
+   estiloGeral:{
+     flex:0.1,
+     justifyContent: "space-between",
+     alignItems: 'stretch'
+    },
+    estiloImagem:{
+      width:300,
+      height:300
+    }
+  }
 
 const gerarNumeroAleatorio = () => {
   var numeroAleatorio = Math.random()
@@ -51,20 +58,19 @@ const gerarNumeroAleatorio = () => {
 }
 
 const App = () => {
-  const {texto, estiloBotao, textoBotao} = estilo 
+  const {texto, estiloBotao, textoBotao, estiloGeral, estiloImagem} = estilo 
   return (
-    <View style={{flex:0.1,justifyContent: "space-between", alignItems: 'stretch'}}>
+    <View style={estiloGeral}>
       {alert('Olá seja bem-vindo ao Par ou Impar v1. Desenvolvedor: Nicollas Linhares')}
       <Text style={texto}>Par ou Ímpar</Text>
       <View style={{flex:0.1, alignItems: 'center', justifyContent: 'center'}}>
         <Image source={{uri:"https://mundoeducacao.bol.uol.com.br/upload/conteudo_legenda/00e2122680d7d0ecc24c23f3c299a9dc.jpg"}}
-                style={{width:300,height:300}}/>
+                style={estiloImagem}/>
       </View>
       <TouchableOpacity style={estiloBotao} onPress={gerarNumeroAleatorio}>
         <Text style={textoBotao}>Gerar</Text>
       </TouchableOpacity>
       {/* <Button title="Gerar" onPress={gerarNumeroAleatorio} color="#841584"/> */}
-
     </View>
   )
 }
