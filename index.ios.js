@@ -6,7 +6,8 @@ import {
   Button,
   StyleSheet,
   TouchableOpacity,
-  Image
+  Image,
+  Alert
 
 } from 'react-native'
 
@@ -45,6 +46,11 @@ const estilo = {
      justifyContent: "space-between",
      alignItems: 'stretch'
     },
+    caixaImagem:{
+      flex:0.1,
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
     estiloImagem:{
       width:300,
       height:300
@@ -54,16 +60,17 @@ const estilo = {
 const gerarNumeroAleatorio = () => {
   var numeroAleatorio = Math.random()
   numeroAleatorio = Math.floor(numeroAleatorio*10)
-  alert(`O numero sorteado foi: ${numeroAleatorio}`)
+  Alert.alert(`O numero sorteado foi: ${numeroAleatorio}`)
 }
 
 const App = () => {
-  const {texto, estiloBotao, textoBotao, estiloGeral, estiloImagem} = estilo 
+  const {texto, estiloBotao, textoBotao, 
+          estiloGeral, estiloImagem, caixaImagem} = estilo 
   return (
     <View style={estiloGeral}>
-      {alert('Olá seja bem-vindo ao Par ou Impar v1. Desenvolvedor: Nicollas Linhares')}
+      {Alert.alert('Olá seja bem-vindo ao Par ou Impar v1. Desenvolvedor: Nicollas Linhares')}
       <Text style={texto}>Par ou Ímpar</Text>
-      <View style={{flex:0.1, alignItems: 'center', justifyContent: 'center'}}>
+      <View style={caixaImagem}>
         <Image source={{uri:"https://mundoeducacao.bol.uol.com.br/upload/conteudo_legenda/00e2122680d7d0ecc24c23f3c299a9dc.jpg"}}
                 style={estiloImagem}/>
       </View>
