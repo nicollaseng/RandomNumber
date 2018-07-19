@@ -5,7 +5,8 @@ import {
   View,
   Button,
   StyleSheet,
-  TouchableOpacity
+  TouchableOpacity,
+  Image
 
 } from 'react-native'
 
@@ -13,7 +14,6 @@ const estilo = {
   texto: {
     fontSize:50,
     backgroundColor: '#53ff1a',
-    marginVertical: 300,
     color: 'white',
     padding: 20,
     textAlign: 'center',
@@ -53,10 +53,14 @@ const gerarNumeroAleatorio = () => {
 const App = () => {
   const {texto, estiloBotao, textoBotao} = estilo 
   return (
-    <View>
+    <View style={{flex:0.1,justifyContent: "space-between", alignItems: 'stretch'}}>
       {alert('Olá seja bem-vindo ao Par ou Impar v1. Desenvolvedor: Nicollas Linhares')}
       <Text style={texto}>Par ou Ímpar</Text>
-      <TouchableOpacity style={estiloBotao}>
+      <View style={{flex:0.1, alignItems: 'center', justifyContent: 'center'}}>
+        <Image source={{uri:"https://mundoeducacao.bol.uol.com.br/upload/conteudo_legenda/00e2122680d7d0ecc24c23f3c299a9dc.jpg"}}
+                style={{width:300,height:300}}/>
+      </View>
+      <TouchableOpacity style={estiloBotao} onPress={gerarNumeroAleatorio}>
         <Text style={textoBotao}>Gerar</Text>
       </TouchableOpacity>
       {/* <Button title="Gerar" onPress={gerarNumeroAleatorio} color="#841584"/> */}
